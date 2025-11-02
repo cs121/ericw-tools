@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DFFE873B-870B-4B63-AFF6-26F3FF617374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tool Shims">
+      <UniqueIdentifier>{88FF9A0D-4D37-424A-9577-D31EE7F880A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{EDA89E7F-1664-43E8-B9B5-C61906260A82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QBSP">
+      <UniqueIdentifier>{78A5B515-05C3-477F-A5E3-9E459243F7E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Light">
+      <UniqueIdentifier>{6322C42E-3E56-49B3-83A5-1FA2FBC3EEBC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VIS">
+      <UniqueIdentifier>{6C3C7340-D4BC-460D-AF23-71D10CA3B69E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BSPUtil">
+      <UniqueIdentifier>{992F3282-C351-4863-9A6E-83EF80658D2A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Diagnostics">
+      <UniqueIdentifier>{11892DB1-54F4-4092-B56F-4BB20F5060A4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dispatcher.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_shims\bspinfo_entry.cc">
+      <Filter>Source Files\Tool Shims</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_shims\bsputil_entry.cc">
+      <Filter>Source Files\Tool Shims</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_shims\light_entry.cc">
+      <Filter>Source Files\Tool Shims</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_shims\qbsp_entry.cc">
+      <Filter>Source Files\Tool Shims</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_shims\vis_entry.cc">
+      <Filter>Source Files\Tool Shims</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bsputil\bsputil.cc">
+      <Filter>Source Files\BSPUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\bspfile.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\bspfile_common.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\bspfile_generic.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\bspfile_q1.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\bspfile_q2.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\bspinfo.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\bsputils.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\bspxfile.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\cmdlib.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\decompile.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\entdata.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\fs.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\imglib.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\litfile.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\log.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\mapfile.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\mathlib.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\parser.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\prtfile.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\qvec.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\settings.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\threads.cc">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\bounce.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\entities.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\light.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\lightgrid.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\ltface.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\phong.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\spatialindex.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\surflight.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\trace.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\trace_embree.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\light\write.cc">
+      <Filter>Source Files\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\brush.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\brushbsp.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\csg.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\exportobj.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\faces.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\map.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\merge.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\outside.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\portals.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\prtfile.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\qbsp.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\tjunc.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\tree.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\qbsp\writebsp.cc">
+      <Filter>Source Files\QBSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vis\flow.cc">
+      <Filter>Source Files\VIS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vis\soundpvs.cc">
+      <Filter>Source Files\VIS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vis\state.cc">
+      <Filter>Source Files\VIS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vis\vis.cc">
+      <Filter>Source Files\VIS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\common\debugger.natvis">
+      <Filter>Diagnostics</Filter>
+    </Natvis>
+  </ItemGroup>
+</Project>
