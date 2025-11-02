@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{4774CB07-FDFE-4C1A-ACFC-DBAD7BDC46FD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>csmap</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <EmbreeIncludeDir></EmbreeIncludeDir>
+    <EmbreeLibDir></EmbreeLibDir>
+    <TbbIncludeDir></TbbIncludeDir>
+    <TbbLibDir></TbbLibDir>
+    <FmtLibDir></FmtLibDir>
+    <JsonCppLibDir></JsonCppLibDir>
+    <ParetoLibDir></ParetoLibDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)intermediate\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>csmap</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;USE_WIN32THREADS;ERICWTOOLS_VERSION=\"csmap\";WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include;$(ProjectDir)..\..\3rdparty;$(ProjectDir)..\..\3rdparty\fmt\include;$(ProjectDir)..\..\3rdparty\jsoncpp\include;$(ProjectDir)..\..\3rdparty\pareto\include;$(EmbreeIncludeDir);$(TbbIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(EmbreeLibDir);$(TbbLibDir);$(FmtLibDir);$(JsonCppLibDir);$(ParetoLibDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmt.lib;jsoncpp_static.lib;pareto.lib;embree4.lib;tbb.lib;tbbmalloc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;USE_WIN32THREADS;ERICWTOOLS_VERSION=\"csmap\";_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include;$(ProjectDir)..\..\3rdparty;$(ProjectDir)..\..\3rdparty\fmt\include;$(ProjectDir)..\..\3rdparty\jsoncpp\include;$(ProjectDir)..\..\3rdparty\pareto\include;$(EmbreeIncludeDir);$(TbbIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(EmbreeLibDir);$(TbbLibDir);$(FmtLibDir);$(JsonCppLibDir);$(ParetoLibDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmt.lib;jsoncpp_static.lib;pareto.lib;embree4.lib;tbb.lib;tbbmalloc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;USE_WIN32THREADS;ERICWTOOLS_VERSION=\"csmap\";WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include;$(ProjectDir)..\..\3rdparty;$(ProjectDir)..\..\3rdparty\fmt\include;$(ProjectDir)..\..\3rdparty\jsoncpp\include;$(ProjectDir)..\..\3rdparty\pareto\include;$(EmbreeIncludeDir);$(TbbIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(EmbreeLibDir);$(TbbLibDir);$(FmtLibDir);$(JsonCppLibDir);$(ParetoLibDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmt.lib;jsoncpp_static.lib;pareto.lib;embree4.lib;tbb.lib;tbbmalloc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;USE_WIN32THREADS;ERICWTOOLS_VERSION=\"csmap\";_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include;$(ProjectDir)..\..\3rdparty;$(ProjectDir)..\..\3rdparty\fmt\include;$(ProjectDir)..\..\3rdparty\jsoncpp\include;$(ProjectDir)..\..\3rdparty\pareto\include;$(EmbreeIncludeDir);$(TbbIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(EmbreeLibDir);$(TbbLibDir);$(FmtLibDir);$(JsonCppLibDir);$(ParetoLibDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmt.lib;jsoncpp_static.lib;pareto.lib;embree4.lib;tbb.lib;tbbmalloc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dispatcher.cc" />
+    <ClCompile Include="tool_shims\bspinfo_entry.cc" />
+    <ClCompile Include="tool_shims\bsputil_entry.cc" />
+    <ClCompile Include="tool_shims\light_entry.cc" />
+    <ClCompile Include="tool_shims\qbsp_entry.cc" />
+    <ClCompile Include="tool_shims\vis_entry.cc" />
+    <ClCompile Include="..\..\bsputil\bsputil.cc" />
+    <ClCompile Include="..\..\common\bspfile.cc" />
+    <ClCompile Include="..\..\common\bspfile_common.cc" />
+    <ClCompile Include="..\..\common\bspfile_generic.cc" />
+    <ClCompile Include="..\..\common\bspfile_q1.cc" />
+    <ClCompile Include="..\..\common\bspfile_q2.cc" />
+    <ClCompile Include="..\..\common\bspinfo.cc" />
+    <ClCompile Include="..\..\common\bsputils.cc" />
+    <ClCompile Include="..\..\common\bspxfile.cc" />
+    <ClCompile Include="..\..\common\cmdlib.cc" />
+    <ClCompile Include="..\..\common\decompile.cc" />
+    <ClCompile Include="..\..\common\entdata.cc" />
+    <ClCompile Include="..\..\common\fs.cc" />
+    <ClCompile Include="..\..\common\imglib.cc" />
+    <ClCompile Include="..\..\common\litfile.cc" />
+    <ClCompile Include="..\..\common\log.cc" />
+    <ClCompile Include="..\..\common\mapfile.cc" />
+    <ClCompile Include="..\..\common\mathlib.cc" />
+    <ClCompile Include="..\..\common\parser.cc" />
+    <ClCompile Include="..\..\common\prtfile.cc" />
+    <ClCompile Include="..\..\common\qvec.cc" />
+    <ClCompile Include="..\..\common\settings.cc" />
+    <ClCompile Include="..\..\common\threads.cc" />
+    <ClCompile Include="..\..\light\bounce.cc" />
+    <ClCompile Include="..\..\light\entities.cc" />
+    <ClCompile Include="..\..\light\light.cc" />
+    <ClCompile Include="..\..\light\lightgrid.cc" />
+    <ClCompile Include="..\..\light\ltface.cc" />
+    <ClCompile Include="..\..\light\phong.cc" />
+    <ClCompile Include="..\..\light\spatialindex.cc" />
+    <ClCompile Include="..\..\light\surflight.cc" />
+    <ClCompile Include="..\..\light\trace.cc" />
+    <ClCompile Include="..\..\light\trace_embree.cc" />
+    <ClCompile Include="..\..\light\write.cc" />
+    <ClCompile Include="..\..\qbsp\brush.cc" />
+    <ClCompile Include="..\..\qbsp\brushbsp.cc" />
+    <ClCompile Include="..\..\qbsp\csg.cc" />
+    <ClCompile Include="..\..\qbsp\exportobj.cc" />
+    <ClCompile Include="..\..\qbsp\faces.cc" />
+    <ClCompile Include="..\..\qbsp\map.cc" />
+    <ClCompile Include="..\..\qbsp\merge.cc" />
+    <ClCompile Include="..\..\qbsp\outside.cc" />
+    <ClCompile Include="..\..\qbsp\portals.cc" />
+    <ClCompile Include="..\..\qbsp\prtfile.cc" />
+    <ClCompile Include="..\..\qbsp\qbsp.cc" />
+    <ClCompile Include="..\..\qbsp\tjunc.cc" />
+    <ClCompile Include="..\..\qbsp\tree.cc" />
+    <ClCompile Include="..\..\qbsp\writebsp.cc" />
+    <ClCompile Include="..\..\vis\flow.cc" />
+    <ClCompile Include="..\..\vis\soundpvs.cc" />
+    <ClCompile Include="..\..\vis\state.cc" />
+    <ClCompile Include="..\..\vis\vis.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\common\debugger.natvis" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
