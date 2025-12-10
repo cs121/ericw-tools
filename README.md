@@ -87,6 +87,16 @@ cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE="$(pwd)/../vcpkg/scripts/buildsystems/vcpkg.cmake" -DCMAKE_GENERATOR_PLATFORM=Win32 -DSPHINX_EXECUTABLE="$(pwd)/../sphinx-venv/Scripts/sphinx-build.exe"
 ```
 
+To build the command line tools with MSVC and NMake (from a Visual Studio Developer Command Prompt), the repository also includes a preconfigured makefile and batch helper. By default it looks for Embree and TBB in the same locations used by `build-windows.ps1`:
+
+```
+build-msvc.bat
+# or to target a specific configuration/locations
+# CONFIG=Debug EMBREE_DIR=C:\embree-4.4.0\lib\cmake\embree-4.4.0 TBB_DIR=C:\oneapi-tbb-2021.11.0\lib\cmake\tbb build-msvc.bat qbsp vis light
+```
+
+Running the batch file configures `build-msvc` with the `NMake Makefiles` generator and builds the `qbsp`, `vis`, and `light` executables. You can pass NMake targets (such as `qbsp`) as arguments to build only what you need.
+
 #### IDE Tips - CLion
 
 - Modify the "Google Test" run/debug configuration template to have `--gtest_catch_exceptions=0`, otherwise the  
